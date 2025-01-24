@@ -8,13 +8,28 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
+
+
+
 function Header() {
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <>
 
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="fixed">
+                <AppBar position="fixed" sx={{ bgcolor: "#473e3d" }}>
                     <Toolbar>
                         <IconButton
                             size="large"
@@ -26,13 +41,29 @@ function Header() {
                             <MenuIcon />
                         </IconButton>
 
-<Typography> Juho Valtavaara </Typography>
+                        
+                        <Menu
+                            anchorEl={anchorEl}
+                            id="navigationmenu"
+                            open={open}
+                            onClose={handleClose}
+                            onClick={handleClose}
+
+                        >
+
+                            <MenuItem >
+
+                            </MenuItem>
+
+                        </Menu> 
+
+                        <Typography> Juho Valtavaara </Typography>
 
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
 
                         </Typography>
                         <Typography color="inherit">Instagram</Typography>
-                        <IconButton style={{color: "lightpurple"}}>
+                        <IconButton style={{ color: "lightpurple" }}>
                             <InstagramIcon onClick={event => window.location.href = 'https://www.instagram.com/fullbrickdev/'}></InstagramIcon>
                         </IconButton>
                     </Toolbar>
