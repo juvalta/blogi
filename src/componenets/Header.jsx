@@ -10,6 +10,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from "react-router-dom";
 
 
 
@@ -32,16 +33,20 @@ function Header() {
                 <AppBar position="fixed" sx={{ bgcolor: "#473e3d" }}>
                     <Toolbar>
                         <IconButton
+                            onClick={handleClick}
                             size="large"
                             edge="start"
                             color="inherit"
                             aria-label="menu"
                             sx={{ mr: 2 }}
+                            aria-controls={open ? 'navigationmenu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
                         >
                             <MenuIcon />
                         </IconButton>
 
-                        
+
                         <Menu
                             anchorEl={anchorEl}
                             id="navigationmenu"
@@ -50,12 +55,22 @@ function Header() {
                             onClick={handleClose}
 
                         >
-
-                            <MenuItem >
-
+                            <Link to='./tarusormustenherrasta'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Taru sormusten herrasta</Typography>
                             </MenuItem>
-
-                        </Menu> 
+                            </Link>
+                            <Link to='./starwars'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Star Wars</Typography>
+                            </MenuItem>
+                            </Link>
+                            <Link to='./oulu'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Oulu</Typography>
+                            </MenuItem>
+                            </Link>
+                        </Menu>
 
                         <Typography> Juho Valtavaara </Typography>
 
