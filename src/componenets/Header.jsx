@@ -7,6 +7,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { Link } from "react-router-dom";
+
+
+
 
 function Header() {
 
@@ -15,23 +21,62 @@ function Header() {
     const mass = 10000;
     const rs = (2 * g * mass) / (c * c);
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
 
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="fixed">
+                <AppBar position="fixed" sx={{ bgcolor: "#473e3d" }}>
                     <Toolbar>
                         <IconButton
+                            onClick={handleClick}
                             size="large"
                             edge="start"
                             color="inherit"
                             aria-label="menu"
                             sx={{ mr: 2 }}
+                            aria-controls={open ? 'navigationmenu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
                         >
                             <MenuIcon />
                         </IconButton>
 
-<Typography> Juho Valtavaara </Typography>
+
+                        <Menu
+                            anchorEl={anchorEl}
+                            id="navigationmenu"
+                            open={open}
+                            onClose={handleClose}
+                            onClick={handleClose}
+
+                        >
+                            <Link to='./tarusormustenherrasta'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Taru sormusten herrasta</Typography>
+                            </MenuItem>
+                            </Link>
+                            <Link to='./starwars'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Star Wars</Typography>
+                            </MenuItem>
+                            </Link>
+                            <Link to='./oulu'>
+                            <MenuItem onClick={handleClose}>
+                                <Typography>Oulu</Typography>
+                            </MenuItem>
+                            </Link>
+                        </Menu>
+
+                        <Typography> Juho Valtavaara </Typography>
 
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
 

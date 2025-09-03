@@ -1,8 +1,8 @@
-# React + Vite
+# LEGO-blogi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Työn alla oleva LEGO-blogi. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TO-DO:
+- Lisää sisältöä eri sivuille
+- Lisää tervetuloteksti kotisivulle 
+- Tutustu NextJS:ään tai Hugoon (staattisia sivugeneraattoreita)

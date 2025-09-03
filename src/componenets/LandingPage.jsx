@@ -8,13 +8,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Header from "./header";
+import underconstruction from "../assets/underconstruction.jpg";
 
 function LandingPage() {
 
     return (
         <>
             <Header />
-            
+            <img src={underconstruction} />
         </>
     )
 }
