@@ -10,6 +10,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Header() {
 
+    const c = 30;
+    const g = 6;
+    const mass = 10000;
+    const rs = (2 * g * mass) / (c * c);
+
     return (
         <>
 
@@ -32,14 +37,62 @@ function Header() {
 
                         </Typography>
                         <Typography color="inherit">Instagram</Typography>
-                        <IconButton style={{color: "lightpurple"}}>
-                            <InstagramIcon onClick={event => window.location.href = 'https://www.instagram.com/fullbrickdev/'}></InstagramIcon>
+                        <IconButton onClick={event => window.location.href = 'https://www.instagram.com/fullbrickdev/'} style={{color: "lightpurple"}}>
+                            <InstagramIcon></InstagramIcon>
                         </IconButton>
                     </Toolbar>
                 </AppBar>
             </Box>
 
-            <Typography h6="true"> tässä blogini </Typography>
+            
+
+            <div className="blackHole" style={{backgroundColor: 'black', borderRadius: '50%', width: `${1 * rs}px`, height: `${1 * rs}px`, position: 'relative'}}> 
+                <div className="accretionDisk" style={{
+                    backgroundColor: 'transparent', 
+                    borderRadius: '50%',
+                    width: `${3 * rs}px`,
+                    height: `${3 * rs}px`, 
+                    border: '2px solid gray',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)'
+                    }}>
+
+                    </div>
+
+                <div className="unstable-photon-orbit" style={{
+                    backgroundColor: 'transparent', 
+                    borderRadius: '50%',
+                    width: `${1,5 * rs}px`,
+                    height: `${1,5 * rs}px`, 
+                    border: '2px solid orange',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)'
+                    }}>
+
+                    </div>
+            </div>
+
+            <div style={{position: 'absolute', top: 0, right: 0, width: '100%', height: '100%'}}>
+                {Array.from({ length: 10}).map((_, i) => (
+                    <div
+                    key={i}
+                    style={{
+                        position: 'absolute',
+                        top: `${i * 10}%`,
+                        right: 0,
+                        width: '100%',
+                        height: '2px',
+                        background: 'linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))'
+                    }}
+                    />
+                ))}
+            </div>
+            
+            
         </>
     )
 }
