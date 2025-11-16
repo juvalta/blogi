@@ -20,6 +20,8 @@ function App() {
           <Route exact path="/blogi" element={<LandingPage />} />
           <Route exact path="/tokkaaotokkaa" element={<TokkaaOtokkaa/>} />
           <Route exact path="/blackhole" element={<BlackHole/>}/>
+          <Route exact path="/blogi/tokkaaotokkaa" element={<TokkaaOtokkaa/>} />
+          <Route exact path="/blogi/blackhole" element={<BlackHole/>}/>
         </Routes>
       </Router>
       
