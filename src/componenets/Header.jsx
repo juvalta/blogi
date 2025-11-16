@@ -89,7 +89,9 @@ function Header() {
                 </AppBar>
             </Box>
 
-            
+            <div style={{backgroundColor: "lightsteelblue", maxWidth: '80%', height: '80%'}}>
+
+            </div>
 
             <div className="blackHole" style={{backgroundColor: 'black', borderRadius: '50%', width: `${1 * rs}px`, height: `${1 * rs}px`, position: 'relative'}}> 
                 <div className="accretionDisk" style={{

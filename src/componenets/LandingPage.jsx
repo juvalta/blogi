@@ -15,7 +15,7 @@ function LandingPage() {
     return (
         <>
             <Header />
-            <img src={underconstruction} />
+            
         </>
     )
 }
