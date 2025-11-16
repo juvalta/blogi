@@ -5,6 +5,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import PauseIcon from "@mui/icons-material/Pause"
 import { Button, IconButton } from "@mui/material";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Card = ({
     imgSrc,
@@ -17,6 +18,7 @@ export const Card = ({
     hideRating = false,
 }) => {
 
+    const navigate = useNavigate();
     const audioRef = useRef(null);
 
     function play() {
@@ -73,7 +75,7 @@ export const Card = ({
                 <Rating />
             </div>)}
             <div>
-                {buttonText && link && (<Button variant="contained" style={{marginBottom: '10%', marginTop: '5%'}} className="bug-button" href={link}>{buttonText}</Button>)}
+                {buttonText && link && (<Button variant="contained" style={{marginBottom: '10%', marginTop: '5%'}} className="bug-button" onClick={()=> navigate(link)}>{buttonText}</Button>)}
             </div>
         </div>
     )

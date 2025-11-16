@@ -1,0 +1,5 @@
+<script type="text/javascript">
+  // Redirect all 404s to index.html, preserving the path
+  var redirect = location.pathname.replace("/blogi", "");
+  location.replace("/blogi/#" + redirect);
+</script>

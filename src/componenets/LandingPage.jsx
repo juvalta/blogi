@@ -22,7 +22,7 @@ function LandingPage() {
                 hideRating = {true}
                 bugName = "Tökkää ötökkää demo"
                 buttonText="Tutustu!"
-                link="/blogi/tokkaaotokkaa"
+                link="/tokkaaotokkaa"
             />
         </>
     )
