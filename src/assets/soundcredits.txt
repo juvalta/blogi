@@ -4,3 +4,14 @@ dragonflywav.wav:
 
 Creature, Insect - Dragonfly, Caught in Net (Wing Movement).wav by jaegrover -- https://freesound.org/s/240549/ -- License: Creative Commons 0
 
+butterfly.mp3:
+
+Butterfly flying loop by fury12 -- https://freesound.org/s/496719/ -- License: Creative Commons 0
+
+beetle.flac:
+
+20060628.night.beetle.flac by dobroide -- https://freesound.org/s/20528/ -- License: Attribution 4.0
+
+grasshopper.wav:
+
+

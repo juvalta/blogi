@@ -4,8 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import axios from 'axios'
 
-const promise = axios.get('http://localhost:3001/notes')
-console.log(promise)
+/* const promise = axios.get('http://localhost:3001/notes')
+console.log(promise) */
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
