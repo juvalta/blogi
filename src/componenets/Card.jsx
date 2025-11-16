@@ -3,7 +3,7 @@ import "./Card.css"
 import Rating from '@mui/material/Rating'
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import PauseIcon from "@mui/icons-material/Pause"
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { useState, useRef } from "react";
 
 export const Card = ({
@@ -14,6 +14,7 @@ export const Card = ({
     description,
     buttonText,
     link,
+    hideRating = false,
 }) => {
 
     const audioRef = useRef(null);
@@ -68,10 +69,12 @@ export const Card = ({
                     </IconButton>}
             </div>
             {description && <p className="bug-description">{description}</p>}
-            <div className="bug-rating">
+            {!hideRating && (<div className="bug-rating">
                 <Rating />
+            </div>)}
+            <div>
+                {buttonText && link && (<Button variant="contained" style={{marginBottom: '10%', marginTop: '5%'}} className="bug-button" href={link}>{buttonText}</Button>)}
             </div>
-
         </div>
     )
 }

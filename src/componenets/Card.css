@@ -37,3 +37,13 @@
     width: 2.5rem;
     text-align: center;
 }
+
+.bug-button {
+    background-color: orangered !important;
+    width: 7rem;
+    text-align: center;
+}
+
+.bug-button:hover{
+    color: white;
+}

@@ -9,13 +9,21 @@ import Button from '@mui/material/Button';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Header from "./header";
 import underconstruction from "../assets/underconstruction.jpg";
+import { Card } from "./Card";
+import bugImage from "../assets/bug.jpg"
 
 function LandingPage() {
 
     return (
         <>
             <Header />
-            
+            <Card 
+                imgSrc={bugImage}
+                hideRating = {true}
+                bugName = "Tökkää ötökkää demo"
+                buttonText="Tutustu!"
+                link="/blogi/tokkaaotokkaa"
+            />
         </>
     )
 }
