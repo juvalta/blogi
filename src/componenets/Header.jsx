@@ -54,12 +54,12 @@ function Header() {
                             onClick={handleClose}
 
                         >
-                            <Link to="/blackhole">
+                            <Link to="/blogi/blackhole">
                             <MenuItem onClick={handleClose}>
                                 <Typography>Black hole demo</Typography>
                             </MenuItem>
                             </Link>
-                            <Link to="/tokkaaotokkaa">
+                            <Link to="/blogi/tokkaaotokkaa">
                             <MenuItem onClick={handleClose}>
                                 <Typography>Tökkää ötökkää</Typography>
                             </MenuItem>
