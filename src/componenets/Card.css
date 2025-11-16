@@ -1,12 +1,13 @@
 .bug-card {
     width: 15rem;
     border-radius: 1rem;
-    box-shadow: 0px 10px 8px #4e4a4a;
+    box-shadow: 0px 5px 4px #6b6464;
     display: flex;
     flex-direction: column;
     margin: 0.5rem; 
     background-color: rgb(255, 255, 255);
     height: fit-content;
+    margin-bottom: 15%;
 }
 
 .bug-img {
@@ -21,7 +22,8 @@
 .bug-name {
     margin: 0.5rem 5%;
     color: black;
-    font-size: 2cqw;
+    font-size: clamp(1rem, 2cqw, 2rem);
+    overflow-wrap: anywhere;
 }
 
 .bug-rating {
