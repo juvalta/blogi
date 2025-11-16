@@ -31,10 +31,12 @@ export const Card = ({
                 <img src={imgSrc} className="bug-img" />
             )}
             {bugName && <h1 className="bug-name">{bugName}</h1>}
+            <div className="audioButtonContainer">
             {audio &&
-                <IconButton onClick={()=>setValue(value+1)}>
+                <IconButton className="play-audio-button" onClick={()=>setValue(value+1)}>
                     <VolumeUpIcon />
                 </IconButton>}
+            </div>
             {description && <p className="bug-description">{description}</p>}
             <div className="bug-rating">
                 <Rating />
