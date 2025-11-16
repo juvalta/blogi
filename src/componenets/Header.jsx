@@ -16,11 +16,6 @@ import { Link } from "react-router-dom";
 
 function Header() {
 
-    const c = 30;
-    const g = 6;
-    const mass = 10000;
-    const rs = (2 * g * mass) / (c * c);
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -33,7 +28,7 @@ function Header() {
     return (
         <>
 
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1, marginBottom: '20%' }}>
                 <AppBar position="fixed" sx={{ bgcolor: "#473e3d" }}>
                     <Toolbar>
                         <IconButton
@@ -59,19 +54,14 @@ function Header() {
                             onClick={handleClose}
 
                         >
-                            <Link to='./tarusormustenherrasta'>
+                            <Link to='./blackhole'>
                             <MenuItem onClick={handleClose}>
-                                <Typography>Taru sormusten herrasta</Typography>
+                                <Typography>Black hole demo</Typography>
                             </MenuItem>
                             </Link>
-                            <Link to='./starwars'>
+                            <Link to='./tokkaaotokkaa'>
                             <MenuItem onClick={handleClose}>
-                                <Typography>Star Wars</Typography>
-                            </MenuItem>
-                            </Link>
-                            <Link to='./oulu'>
-                            <MenuItem onClick={handleClose}>
-                                <Typography>Oulu</Typography>
+                                <Typography>Tökkää ötökkää</Typography>
                             </MenuItem>
                             </Link>
                         </Menu>
@@ -93,51 +83,7 @@ function Header() {
 
             </div>
 
-            <div className="blackHole" style={{backgroundColor: 'black', borderRadius: '50%', width: `${1 * rs}px`, height: `${1 * rs}px`, position: 'relative'}}> 
-                <div className="accretionDisk" style={{
-                    backgroundColor: 'transparent', 
-                    borderRadius: '50%',
-                    width: `${3 * rs}px`,
-                    height: `${3 * rs}px`, 
-                    border: '2px solid gray',
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)'
-                    }}>
-
-                    </div>
-
-                <div className="unstable-photon-orbit" style={{
-                    backgroundColor: 'transparent', 
-                    borderRadius: '50%',
-                    width: `${1,5 * rs}px`,
-                    height: `${1,5 * rs}px`, 
-                    border: '2px solid orange',
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)'
-                    }}>
-
-                    </div>
-            </div>
-
-            <div style={{position: 'absolute', top: 0, right: 0, width: '100%', height: '100%'}}>
-                {Array.from({ length: 10}).map((_, i) => (
-                    <div
-                    key={i}
-                    style={{
-                        position: 'absolute',
-                        top: `${i * 10}%`,
-                        right: 0,
-                        width: '100%',
-                        height: '2px',
-                        background: 'linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))'
-                    }}
-                    />
-                ))}
-            </div>
+            
             
             
         </>

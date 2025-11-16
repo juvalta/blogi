@@ -6,6 +6,8 @@ import { BrowserRouter as Router,
   Routes, Route
  } from 'react-router-dom';
  import LandingPage from './componenets/LandingPage';
+ import TokkaaOtokkaa from './componenets/TokkaaOtokkaa';
+ import BlackHole from './componenets/BlackHole';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route exact path="" element={<LandingPage />} />
           <Route exact path="/blogi" element={<LandingPage />} />
+          <Route exact path="/tokkaaotokkaa" element={<TokkaaOtokkaa/>} />
+          <Route exact path="/blackhole" element={<BlackHole/>}/>
         </Routes>
       </Router>
       

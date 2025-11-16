@@ -1,0 +1,32 @@
+.bug-card {
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 8px #4e4a4a;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem; 
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+}
+
+.bug-img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.bug-description {
+    color: black;
+}
+
+.bug-name {
+    margin: 0.5rem 5%;
+    color: black;
+    font-size: 2cqw;
+}
+
+.bug-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
