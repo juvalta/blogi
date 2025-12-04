@@ -24,6 +24,13 @@ function LandingPage() {
                 buttonText="Tutustu!"
                 link="/tokkaaotokkaa"
             />
+            <Card
+                imgSrc="https://www.baaripahkina.fi/files/4915/9540/4087/Baaripahkina-latauskuva.jpg"
+                hideRating = {true}
+                bugName="Visakisaaja"
+                buttonText="Kisaamaan!"
+                link="/visakisaaja"
+            />
         </>
     )
 }

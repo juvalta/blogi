@@ -5,9 +5,10 @@ import './App.css';
 import { BrowserRouter as Router,
   Routes, Route
  } from 'react-router-dom';
- import LandingPage from './componenets/LandingPage';
- import TokkaaOtokkaa from './componenets/TokkaaOtokkaa';
- import BlackHole from './componenets/BlackHole';
+ import LandingPage from './components/LandingPage';
+ import TokkaaOtokkaa from './components/TokkaaOtokkaa';
+ import BlackHole from './components/BlackHole';
+ import VisaKisaaja from './components/VisaKisaaja'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Route exact path="/blackhole" element={<BlackHole/>}/>
           <Route exact path="/blogi/tokkaaotokkaa" element={<TokkaaOtokkaa/>} />
           <Route exact path="/blogi/blackhole" element={<BlackHole/>}/>
+          <Route exact path="/visakisaaja" element={<VisaKisaaja />}/>
+          <Route exact path="/blogi/visakisaaja" element={<VisaKisaaja />} />
         </Routes>
       </Router>
       
